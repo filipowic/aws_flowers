@@ -1,0 +1,9 @@
+Projekt został wykonany na platformie AWS korzystając z narzędzi:
+•	Amazon SageMaker – platforma uczenia maszynowego w chmurze
+•	Amazon Simple Storage Service (S3) – internetowy nośnik danych
+Dane do projektu zostały pobrane ze strony: https://www.robots.ox.ac.uk/~vgg/data/flowers/17/index.html
+Dane w postaci obrazów przedstawiają 17 rodzajów kwiatów. Do każdego rodzaju jest 80 zdjęć z czego 54 z nich zostały wykorzystane do stworzenia bazy do uczenia i 26 zostało wykorzystane do stworzenia bazy walidacyjnej.
+Dodatkowo korzystałem z Apache MXNet aby pliki do uczenia i walidacji modelu zostały przekształcone z formatu JPG do formatu REC (format sekwencji rekordów RecordIO).
+Projekt został napisany w języku Python3, zasoby aws należały do regionu us-east-2 (Ohio), instancje wykorzystane w projekcie to ml.p2.xlarge, ml.m4.xlarge oraz ml.eia1.large. 
+Podczas wykonywania projektu musiałem wnioskować o dodatkowe uprawnienia do ml.p2.xlarge oraz ml.eia1.large
+Niestety wyuczony model nie jest idealny (często się myli), jest to prawdopodobnie spowodowane zbyt małą ilością danych do uczenia.
